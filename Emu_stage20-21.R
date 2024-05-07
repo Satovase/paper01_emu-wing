@@ -1,5 +1,4 @@
 # R version 4.2.1
-# ライブラリのバージョンは20240313時点
 library(Seurat) # 4.3.0
 library(patchwork) # ver 1.1.2
 library(ggplot2) # 3.4.2
@@ -52,7 +51,7 @@ cluster <- gsub("7", "Hematopietic cells", cluster)
 cluster <- gsub("8", "Ectoderm", cluster)
 cluster <- gsub("9", "Notochord", cluster)
 all.markers[, "cluster"] <- cluster
-write.csv(all.markers, file = "~/FindAllMarker_emu2021.csv") # supplymental data 1?
+write.csv(all.markers, file = "~/FindAllMarker_emu2021.csv") # supplymentaxry table 1
 
 # Dotplot
 dotplot_genes <- c("TWIST1", "EBF3", "TBX5", "PRRX1", "HAND2", "LBX1", "MYOD1", "PAX3", "TNNT3", "MYOG", "MET", "OSR1", "PAX2", "LMO2", "CDH5", "SOX10", "ELAVL4", "SHH", "TBXT", "WNT6")        
@@ -67,7 +66,7 @@ for (i in genes) {
   p <- FeaturePlot(emu2021.t, features = i, cols = c("#e6e6e6", "blue"), pt.size = 1)
   pdf(file = filename)
   print(p)
-  dev.off() # Fig. S8
+  dev.off() # Fig. S9
 }
 
 subset <- subset(emu2021.t, ident = 2)
@@ -78,7 +77,7 @@ for (i in genes) {
   p <- FeaturePlot(subset, features = i, cols = c("#e6e6e6", "blue"), pt.size = 1)
   pdf(file = filename)
   print(p)
-  dev.off() # Fig. S9
+  dev.off() # Fig. S10
 }
 
 
