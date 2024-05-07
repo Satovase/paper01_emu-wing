@@ -3,7 +3,7 @@
 Raw single-cell transcriptome sequencing data (FASTQ) of emu is available in the DNA Data Bank of Japan (DDBJ) under accession codes DRA014432 and DRA017391.
 
 
-### Figures
+### Export figures using Seurat (doi:10.1016/j.cell.2021.04.048)
 Emu_stage20-21.R: Figure 3a, 3b, S9, S10, Supplymentary table 1
 
 Emu_stage25.R: Figure 3d, 3e, 3g, 5a, S11, S12, Supplymentary table 2, Supplymentary table 3
@@ -13,7 +13,7 @@ Chicken_stage24.R:  Figure S13a, S13b, S13d, Supplymentary table 4
 Chicken_stage27.R:  Figure S13e, S13f, S13h, Supplymentary table 5
 
 
-### Preprocessing using cellranger
+### Preprocessing using cellranger (doi:10.1038/ncomms14049)
 Emu_make_cellranger_count
 
 Chicken_make_cellranger_count
