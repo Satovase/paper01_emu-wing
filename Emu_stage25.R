@@ -45,7 +45,7 @@ cluster <- gsub("3", "Hematopietic cells", cluster)
 cluster <- gsub("4", "Neural crest 1", cluster)
 cluster <- gsub("5", "Neural crest 2", cluster)
 all.markers[, "cluster"] <- cluster
-write.csv(all.markers, file = "~/FindAllMarker_emu25.csv") # Supplymental Data 2?
+write.csv(all.markers, file = "~/FindAllMarker_emu25.csv") # Supplymentary table 2
 
 # Dotplot
 dotplot_genes <- c("TBX5", "PRRX1", "HAND2", "FN1", "TNNT3", "LBX1", "MYOD1", "MYOG", "MET", "PAX3", "LMO2", "CDH5", "SOX10")
@@ -58,7 +58,7 @@ for (i in dotplot_genes) {
   p <- FeaturePlot(emu25.t, features = i, cols = c("#e6e6e6", "blue"), pt.size = 1)
   pdf(file = filename)
   print(p)
-  dev.off() # Fig. S10
+  dev.off() # Fig. S11
 }
 
 # ViolinPlot
@@ -81,9 +81,8 @@ PH_neg_cells = subset(subset,cells=PH_neg_ids)
 PH_neg_cells@meta.data[, "split_gene"] <- "Pax3-_Hand2-" # 69 samples
 
 genes <- c("HAND2", "PAX3", "TNNT3", "MYOD1", "TBX5", "MET", "LBX1", "CASP10", "APAF1", "BAK1")
-split_cells <- merge(H_cells, PH_pos_cells)
-split_cells <- merge(split_cells, P_cells)
-order <- c("Pax3+cells", "Pax3+Hand2+cells", "Hand2+cells")
+split_cells <- merge(P_cells, PH_pos_cells)
+order <- c("Pax3+cells", "Pax3+Hand2+cells")
 split_cells@meta.data$split_gene <- factor(x = split_cells@meta.data$split_gene, levels = order)
 for (i in genes) {
   filename <- paste0(i, "_musclecluster_Pax3-Hand2.pdf")
@@ -98,4 +97,4 @@ for (i in genes) {
 Idents(object = split_cells) <- split_cells@meta.data$'split_gene'
 markers <- FindMarkers(split_cells, ident.1 = "Pax3+cells", ident.2 = "Pax3+Hand2+cells", logfc.threshold = 0)
 head(markers)
-write.csv(markers, file = "~/FindMarker_emu25.csv")
+write.csv(markers, file = "~/FindMarker_emu25.csv") # Supplymentary table 3
