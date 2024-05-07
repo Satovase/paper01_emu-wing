@@ -98,3 +98,33 @@ Idents(object = split_cells) <- split_cells@meta.data$'split_gene'
 markers <- FindMarkers(split_cells, ident.1 = "Pax3+cells", ident.2 = "Pax3+Hand2+cells", logfc.threshold = 0)
 head(markers)
 write.csv(markers, file = "~/FindMarker_emu25.csv") # Supplymentary table 3
+
+# Muscle cluster analysis
+muscle <- subset(emu25.t, ident = 2)
+cell_barcords <- WhichCells(muscle)
+emu25 <- CreateSeuratObject(counts=gg24sc.data, project="HH24sc", min.cells=3, min.features=200)
+subset <- subset(emu25, cells = cells_barcord)
+
+# QC
+subset <- NormalizeData(subset, normalization.method = "LogNormalize", scale.factor = 10000)
+subset <- FindVariableFeatures(subset, selection.method = "vst", nfeatures = 2000)
+all.genes <- rownames(subset)
+subset <- ScaleData(subset, features = all.genes)
+subset <- RunPCA(subset, eatures = VariableFeatures(object = subset))
+ElbowPlot(subset, ndims = 20, reduction = "pca")
+subset <- FindNeighbors(subset, dims = 1:10)
+subset <- FindClusters(subset, resolution=0.2)
+subset.u <- RunUMAP(subset, dims = 1:10)
+
+# FeaturePlot
+genes <-  c("PAX3", "HAND2", "PRRX1", "TBX5")
+for (i in genes) {
+  filename <- paste0(i, ".pdf")
+  print(filename)
+  p <- FeaturePlot(subset.u, features = i, cols = c("#e6e6e6", "blue"), pt.size = 1)
+  pdf(file = filename)
+  print(p)
+  dev.off()
+} # Fig. S12
+
+
