@@ -7,7 +7,7 @@ library(dplyr) # ver 1.1.2
 library(cowplot) # ver 1.1.1
 
 # Loading data
-emu2021.data <- Read10X(data.dir = "~/filtered_feature_bc_matrix")
+emu2021.data <- Read10X(data.dir = "~/run_count_EmuHH20-21sc_refseq/outs/filtered_feature_bc_matrix")
 emu2021 <- CreateSeuratObject(counts=emu2021.data, project="EmuHH2021_refseq", min.cells=3, min.features=200)
 # 16868 features across 3871 samples
 
