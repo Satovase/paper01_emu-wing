@@ -1,5 +1,8 @@
 # paper01_emu-wing
 
+Raw single-cell transcriptome sequencing data (FASTQ) of emu is available in the DNA Data Bank of Japan (DDBJ) under accession codes DRA014432 and DRA017391.
+
+
 ### Figures
 Emu_stage20-21.R: Figure 3a, 3b, S9, S10, Supplymentary table 1
 
