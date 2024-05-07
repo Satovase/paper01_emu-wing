@@ -1,5 +1,4 @@
 # R version 4.2.1
-# ライブラリのバージョンは20240313時点
 library(Seurat) # 4.3.0
 library(patchwork) # ver 1.1.2
 library(ggplot2) # 3.4.2
@@ -8,7 +7,7 @@ library(dplyr) # ver 1.1.2
 library(cowplot) # ver 1.1.1
 
 # Loading data
-emu25.data <- Read10X(data.dir = "/Users/tanaka/run_count_EmuHH25sc_refseq/outs/filtered_feature_bc_matrix")
+emu25.data <- Read10X(data.dir = "~/run_count_EmuHH25sc_refseq/outs/filtered_feature_bc_matrix")
 emu25 <- CreateSeuratObject(counts=emu25.data, project="EmuHH25_refseq", min.cells=3, min.features=200)
 # 17050 features across 8710 samples
 
