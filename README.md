@@ -18,5 +18,5 @@ Chicken_stage24.R:  Figure S13a, S13b, S13d, Supplymentary table 4
 
 Chicken_stage27.R:  Figure S13e, S13f, S13h, Supplymentary table 5
 
-## License
+# License
 This project is covered under the Apache 2.0 License.
