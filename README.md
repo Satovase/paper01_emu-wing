@@ -4,7 +4,7 @@ This repository contains R codes used to perform analysis in the "Immobilization
 
 Raw single-cell transcriptome sequencing data (FASTQ) of emu is available in the DNA Data Bank of Japan (Accession numbers: DRA014432 and DRA017391; Bioproject: PRJDB16987 and PRJDB13845).
 
-Raw single-cell transcriptome sequencing data (FASTQ) of stage 24 (SRA accession numbers: SRR14570167 to SRR14570174) and stage 27 (SRA accession numbers: SRR14570175 to SRR14570178) were downloaded from the Sequence Read Archive (SRA). These data were previously published in Feregrino C, Tschopp P. Assessing evolutionary and developmental transcriptome dynamics in homologous cell types. Dev Dyn. 2022 Sep;251(9):1472-1489. doi: 10.1002/dvdy.384.
+Raw single-cell transcriptome sequencing data (FASTQ) of stage 24 (SRA accession numbers: SRR14570167 to SRR14570174) and stage 27 (SRA accession numbers: SRR14570175 to SRR14570178) were downloaded from the Sequence Read Archive (SRA). These data were previously published in Feregrino C, Tschopp P. Assessing evolutionary and developmental transcriptome dynamics in homologous cell types. Dev Dyn. 2022 Sep;251(9):1472-1489. doi: <10.1002/dvdy.384>.
 
 ### Preprocessing using cellranger (doi:10.1038/ncomms14049)
 Emu_make_cellranger_count
