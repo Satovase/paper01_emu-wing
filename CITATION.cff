@@ -1,10 +1,10 @@
 cff-version: 1.1.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: Joe
-  given-names: Johnson
-orcid: https://orcid.org/0000-0000-0000-0000
-title:
+- family-names: Ono
+  given-names: Satomi
+orcid: https://orcid.org/0009-0003-4386-3447
+title: Immobilization secondary to cell death of muscle precursors with a dual transcriptional signature contributes to the emu wing skeletal pattern
 version: 5
 date-released: 2024-09-17
         
