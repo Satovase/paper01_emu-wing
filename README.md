@@ -1,6 +1,6 @@
 # paper01_emu-wing
 
-This repository contains R codes used to perform analysis in the "Immobilization secondary to cell death of muscle precursors with a dual transcriptional signature contributes to the emu wing skeletal pattern" paper.
+This repository contains R codes used to perform analysis in the "Immobilization secondary to cell death of muscle precursors with a dual transcriptional signature contributes to the emu wing skeletal pattern" paper. doi: <https://doi.org/10.1038/s41467-024-52203-x>.
 
 Raw single-cell transcriptome sequencing data (FASTQ) of emu is available in the DNA Data Bank of Japan (Accession numbers: DRA014432 and DRA017391; Bioproject: PRJDB16987 and PRJDB13845).
 
